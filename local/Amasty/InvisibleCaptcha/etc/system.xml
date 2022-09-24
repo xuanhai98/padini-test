@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2018 Amasty (https://www.amasty.com)
+ * @package Amasty_InvisibleCaptcha
+ */
+-->
+<config>
+    <sections>
+        <aminvisiblecaptcha translate="label" module="aminvisiblecaptcha">
+            <label>Google Invisible Captcha</label>
+            <tab>amasty</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>71509</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable Invisible Captcha</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <captcha_key translate="label comment">
+                            <label>Site Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[You can generate site key <a href="https://www.google.com/recaptcha/admin" target="_blank">here</a>, please check the following <a href="https://amasty.com/knowledge-base/how-to-get-a-site-key-for-invisible-recapcha.html?utm_source=module&utm_medium=captcha&utm_content=faq" target="_blank">article</a> before generation]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </captcha_key>
+                        <captcha_secret translate="label comment">
+                            <label>Secret Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[You can generate site key <a href="https://www.google.com/recaptcha/admin" target="_blank">here</a>, please check the following <a href="https://amasty.com/knowledge-base/how-to-get-a-site-key-for-invisible-recapcha.html?utm_source=module&utm_medium=captcha&utm_content=faq" target="_blank">article</a> before generation]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </captcha_secret>
+                        <language translate="label comment">
+                            <label>Language</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Please leave empty to allow Google to detect a language of user agent or please set needed value from the following list of <a href="https://developers.google.com/recaptcha/docs/language" target="_blank">languages</a>]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </language>
+                        <badge_theme translate="label comment">
+                            <label>Theme of Captcha Badge</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aminvisiblecaptcha/system_config_source_badge_theme</source_model>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Provided by Google]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </badge_theme>
+                        <badge_position translate="label">
+                            <label>Position for Captcha Badge</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aminvisiblecaptcha/system_config_source_badge_position</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </badge_position>
+                        <badge_styles translate="label">
+                            <label>CSS</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <badge_position>inline</badge_position>
+                            </depends>
+                        </badge_styles>
+                    </fields>
+                </general>
+                <amasty translate="label">
+                    <label>Invisible Captcha for Amasty Extensions</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <amasty_customform translate="label comment">
+                            <label>Custom Form</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aminvisiblecaptcha/system_config_source_extension_customform</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Create customizable forms to collect additional information about your customers and view the received data from the admin panel. <a href="https://amasty.com/magento-custom-form.html?utm_source=extension&utm_medium=link&utm_campaign=captcha-cform" target="_blank">Learn more</a>.]]></comment>
+                        </amasty_customform>
+                        <magpleasure_blogpro translate="label comment">
+                            <label>Blog Pro</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aminvisiblecaptcha/system_config_source_extension_blogpro</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Equip your store with full-featured blog that supports responsive layout, numerous widgets, customizable posts, and convenient SEO-tools. <a href="https://amasty.com/magento-blog-pro.html?utm_source=extension&utm_medium=link&utm_campaign=captcha-blog" target="_blank">Learn more.</a>]]></comment>
+                        </magpleasure_blogpro>
+                        <amasty_faq translate="label comment">
+                            <label>Product Questions</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aminvisiblecaptcha/system_config_source_extension_faq</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Provide customers with the ability to ask questions on product pages and organize answers in the informative FAQ section. Manage answers and categories from the backend and customize the knowledge base layout. <a href="https://amasty.com/magento-faq-and-product-questions.html?utm_source=extension&utm_medium=link&utm_campaign=captcha-faq" target="_blank">Learn more.</a>]]></comment>
+                        </amasty_faq>
+                    </fields>
+                </amasty>
+                <advanced translate="label">
+                    <label>Advanced Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <captcha_urls translate="label comment">
+                            <label>URLs to Enable</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[For example: <strong>customer/account/createpost</strong> </br>Each url must be on new line]]></comment>
+                        </captcha_urls>
+                        <captcha_selectors translate="label comment">
+                            <label>Selectors for Forms</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[For example: <strong>.customer-account-create .account-create form</strong> </br>Each selector must be on new line]]></comment>
+                        </captcha_selectors>
+                    </fields>
+                </advanced>
+            </groups>
+        </aminvisiblecaptcha>
+    </sections>
+</config>

@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2018 Amasty (https://www.amasty.com)
+ * @package Amasty_InvisibleCaptcha
+ */
+-->
+<config>
+    <modules>
+        <Amasty_InvisibleCaptcha>
+            <version>2.1.8</version>
+        </Amasty_InvisibleCaptcha>
+    </modules>
+    <global>
+        <helpers>
+            <aminvisiblecaptcha>
+                <class>Amasty_InvisibleCaptcha_Helper</class>
+            </aminvisiblecaptcha>
+        </helpers>
+        <blocks>
+            <aminvisiblecaptcha>
+                <class>Amasty_InvisibleCaptcha_Block</class>
+            </aminvisiblecaptcha>
+        </blocks>
+        <models>
+            <aminvisiblecaptcha>
+               <class>Amasty_InvisibleCaptcha_Model</class>
+            </aminvisiblecaptcha>
+        </models>
+        <resources>
+            <aminvisiblecaptcha_setup>
+                <setup>
+                    <module>Amasty_InvisibleCaptcha</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </aminvisiblecaptcha_setup>
+        </resources>
+        <!--<events>
+            <controller_action_predispatch>
+                <observers>
+                    <aminvisiblecaptcha>
+                        <class>aminvisiblecaptcha/observer</class>
+                        <method>handleControllers</method>
+                    </aminvisiblecaptcha>
+                </observers>
+            </controller_action_predispatch>
+        </events>-->
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Amasty_InvisibleCaptcha>
+                    <files>
+                        <default>Amasty_InvisibleCaptcha.csv</default>
+                    </files>
+                </Amasty_InvisibleCaptcha>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <aminvisiblecaptcha translate="title" module="aminvisiblecaptcha">
+                                            <title>Google Invisible Captcha</title>
+                                        </aminvisiblecaptcha>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <events>
+            <model_config_data_save_before>
+                <observers>
+                    <aminvisiblecaptcha>
+                        <type>singleton</type>
+                        <class>aminvisiblecaptcha/observer</class>
+                        <method>settingsSaving</method>
+                    </aminvisiblecaptcha>
+                </observers>
+            </model_config_data_save_before>
+        </events>
+    </adminhtml>
+    <frontend>
+        <translate>
+            <modules>
+                <Amasty_InvisibleCaptcha>
+                    <files>
+                        <default>Amasty_InvisibleCaptcha.csv</default>
+                    </files>
+                </Amasty_InvisibleCaptcha>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <aminvisiblecaptcha>
+                    <file>amasty/aminvisiblecaptcha.xml</file>
+                </aminvisiblecaptcha>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <aminvisiblecaptcha>
+            <general>
+                <enabled>0</enabled>
+                <captcha_key></captcha_key>
+                <captcha_secret></captcha_secret>
+                <language></language>
+                <badge_theme>light</badge_theme>
+                <badge_position>bottomright</badge_position>
+                <badge_styles></badge_styles>
+            </general>
+            <amasty>
+                <amasty_customform></amasty_customform>
+                <amasty_blogpro></amasty_blogpro>
+                <amasty_faq></amasty_faq>
+            </amasty>
+            <advanced>
+                <captcha_urls><![CDATA[customer/account/createpost
+newsletter/subscriber/new
+customer/account/loginPost
+review/product/post
+contacts/index/post
+]]></captcha_urls>
+                <captcha_selectors><![CDATA[form[action*="customer/account/createpost"]
+form[action*="newsletter/subscriber/new"]
+form[action*="customer/account/loginPost"]
+form[action*="review/product/post"]
+form[action*="contacts/index/post"]
+]]></captcha_selectors>
+            </advanced>
+        </aminvisiblecaptcha>
+    </default>
+</config>

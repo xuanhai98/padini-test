@@ -1,0 +1,30 @@
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <aminvisiblecaptcha translate="title" module="aminvisiblecaptcha">
+                                        <title>Google Invisible Captcha</title>
+                                    </aminvisiblecaptcha>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <translate>
+        <modules>
+            <Amasty_InvisibleCaptcha>
+                <files>
+                    <default>Amasty_InvisibleCaptcha.csv</default>
+                </files>
+            </Amasty_InvisibleCaptcha>
+        </modules>
+    </translate>
+</config>

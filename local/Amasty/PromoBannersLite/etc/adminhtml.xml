@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2020 Amasty (https://www.amasty.com)
+ * @package Amasty_PromoBannersLite
+ */
+-->
+<config>
+    <translate>
+        <modules>
+            <Amasty_PromoBannersLite>
+                <files>
+                    <default>Amasty_PromoBannersLite.csv</default>
+                </files>
+            </Amasty_PromoBannersLite>
+        </modules>
+    </translate>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <ambannerslite>
+                                        <title>Promo Banners Lite</title>
+                                    </ambannerslite>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

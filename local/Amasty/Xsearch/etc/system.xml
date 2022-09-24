@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2019 Amasty (https://www.amasty.com)
+ * @package Amasty_Xsearch
+ */
+-->
+<config>
+    <sections>
+        <amxsearch translate="label" module="amxsearch">
+            <label>Search Pro</label>
+            <tab>amasty</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>190516</sort_order>
+                <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <amasty_information translate="label">
+                    <label>Information</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>amxsearch/adminhtml_system_config_fieldset_info</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </amasty_information>
+                <search>
+                    <label>Search</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <search_type translate="label">
+                            <label>Search Type</label>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_catalog_search_type</backend_model>
+                            <source_model>adminhtml/system_config_source_catalog_search_type</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </search_type>
+                        <no_route translate="label comment">
+                            <label>Enable Redirect from 404 to Search Results</label>
+                            <comment>If option is enabled, customer will be redirected to the store search results from the broken URL instead of the '404 Not Found' page</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <backend_model>Amasty_Xsearch_Model_Backend_Noroute</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </no_route>
+                    </fields>
+                </search>
+                <attributes>
+                    <label>Attributes</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <attribute_1 translate="label">
+                            <label>Attribute #1</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_1>
+                        <attribute_2 translate="label">
+                            <label>Attribute #2</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_2>
+                        <attribute_3 translate="label">
+                            <label>Attribute #3</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>300</sort_order>
+                            <show_in_default>3</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_3>
+                        <attribute_4 translate="label">
+                            <label>Attribute #4</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>4</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_4>
+                        <attribute_5 translate="label">
+                            <label>Attribute #5</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>500</sort_order>
+                            <show_in_default>5</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_5>
+                        <attribute_6 translate="label">
+                            <label>Attribute #6</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>600</sort_order>
+                            <show_in_default>6</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_6>
+                        <attribute_7 translate="label">
+                            <label>Attribute #7</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>700</sort_order>
+                            <show_in_default>7</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_7>
+                        <attribute_8 translate="label">
+                            <label>Attribute #8</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>800</sort_order>
+                            <show_in_default>8</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_8>
+                        <attribute_9 translate="label">
+                            <label>Attribute #9</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>900</sort_order>
+                            <show_in_default>9</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_9>
+                        <attribute_10 translate="label">
+                            <label>Attribute #10</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_attributes</source_model>
+                            <backend_model>amxsearch/config_backend_attribute</backend_model>
+                            <sort_order>1000</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </attribute_10>
+                    </fields>
+                </attributes>
+
+                <autocomplete>
+                    <label>Autocomplete Layout</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <width translate="label">
+                            <label>Popup Width (px)</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>1000</sort_order>
+                            <comment>Set the width of the autocomplete popup window. Recommended value for horizontal
+                                view is 900. To get vertical view please enter 600 and lower.
+                            </comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width>
+                        <min_chars translate="label">
+                            <label>Min Characters</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>1500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </min_chars>
+                        <products_limit translate="label">
+                            <label>Products Limit</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>2000</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </products_limit>
+                        <name_length translate="label">
+                            <label>Name Length</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>2500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name_length>
+                        <desc_length translate="label">
+                            <label>Description Length</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>3000</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </desc_length>
+                        <reviews translate="label">
+                            <label>Show Reviews</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </reviews>
+                        <add2cart translate="label">
+                            <label>Enable "Add to Cart" Button</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4000</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </add2cart>
+                        <image translate="label comment">
+                            <label>Image Thumbnail Size</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>4500</sort_order>
+                            <comment>Resize an image thumbnail in the quick search results popup.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image>
+                    </fields>
+                </autocomplete>
+                <categories translate="label">
+                    <label>Categories</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <search translate="label comment">
+                            <label>Search Categories</label>
+                            <comment>Include Categories in Search Results</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </search>
+                        <limit translate="label comment">
+                            <label>Categories Limit</label>
+                            <comment>Number of Categories to Include in Search Results</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </limit>
+                    </fields>
+                </categories>
+                <theme>
+                    <label>Theme</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <border>
+                            <label>Border Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </border>
+                        <color>
+                            <label>Font Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </color>
+                        <highlight>
+                            <label>Highlight Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </highlight>
+                        <hover>
+                            <label>Background Hover Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hover>
+                        <hover_color>
+                            <label>Font Hover Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hover_color>
+                        <selector>
+                            <label>Search Input DOM-selector</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>550</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </selector>
+                    </fields>
+                </theme>
+<!--                <weights>
+                    <label>Weights</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <weight_1 translate="label">
+                            <label>Weight #1</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_1>
+                        <weight_2 translate="label">
+                            <label>Weight #2</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_2>
+                        <weight_3 translate="label">
+                            <label>Weight #3</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>300</sort_order>
+                            <show_in_default>3</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_3>
+                        <weight_4 translate="label">
+                            <label>Weight #4</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>4</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_4>
+                        <weight_5 translate="label">
+                            <label>Weight #5</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>500</sort_order>
+                            <show_in_default>5</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_5>
+                        <weight_6 translate="label">
+                            <label>Weight #6</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>600</sort_order>
+                            <show_in_default>6</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_6>
+                        <weight_7 translate="label">
+                            <label>Weight #7</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>700</sort_order>
+                            <show_in_default>7</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_7>
+                        <weight_8 translate="label">
+                            <label>Weight #8</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>800</sort_order>
+                            <show_in_default>8</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_8>
+                        <weight_9 translate="label">
+                            <label>Weight #9</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>900</sort_order>
+                            <show_in_default>9</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_9>
+                        <weight_10 translate="label">
+                            <label>Weight #10</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amxsearch/source_weights</source_model>
+                            <sort_order>1000</sort_order>
+                            <show_in_default>10</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight_10>
+                    </fields>
+                </weights>-->
+            </groups>
+        </amxsearch>
+    </sections>
+</config>
